@@ -3,4 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="teamAB_textColor">#616161</color>
+    <color name="teamAB_noColor">#616161</color>
+    <color name="teamAB_noColor2">#000000</color>
+    <color name="teamAB_ColorYellow">#FFEA00</color>
+    <color name="teamAB_ColorRed">#D50000</color>
+
+
+
+
 </resources>

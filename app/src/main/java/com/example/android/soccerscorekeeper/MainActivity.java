@@ -17,12 +17,15 @@ public class MainActivity extends AppCompatActivity {
     int yellowScoreTeamB = 0;
     int redScoreTeamB = 0;
 
+    // Initialize view
+    TextView scoreView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         displayForTeamA(0);
+
     }
 
     /**
@@ -119,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team A.
      */
     public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        scoreView = (TextView) findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -127,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given foul score for Team A.
      */
     public void displayFoulForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_foul_score);
+        scoreView = (TextView) findViewById(R.id.team_a_foul_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -135,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given yellow score for Team A.
      */
     public void displayYellowForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_yellow_score);
+        scoreView = (TextView) findViewById(R.id.team_a_yellow_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -143,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given red score for Team A.
      */
     public void displayRedForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_red_score);
+        scoreView = (TextView) findViewById(R.id.team_a_red_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -151,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team B.
      */
     public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -159,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given foul score for Team B.
      */
     public void displayFoulForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_foul_score);
+        scoreView = (TextView) findViewById(R.id.team_b_foul_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -167,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given yellow score for Team B.
      */
     public void displayYellowForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_yellow_score);
+        scoreView = (TextView) findViewById(R.id.team_b_yellow_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -175,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given red score for Team B.
      */
     public void displayRedForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_red_score);
+        scoreView = (TextView) findViewById(R.id.team_b_red_score);
         scoreView.setText(String.valueOf(score));
     }
 }

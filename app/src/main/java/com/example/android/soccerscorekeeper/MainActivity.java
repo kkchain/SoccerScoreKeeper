@@ -25,7 +25,46 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         displayForTeamA(0);
+    }
 
+    // Save Team A and B score
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("saveTeamAScore", scoreTeamA);
+        outState.putInt("saveTeamAFoul", foulScoreTeamA);
+        outState.putInt("saveTeamAYellow", yellowScoreTeamA);
+        outState.putInt("saveTeamARed", redScoreTeamA);
+
+        outState.putInt("saveTeamBScore", scoreTeamB);
+        outState.putInt("saveTeamBFoul", foulScoreTeamB);
+        outState.putInt("saveTeamBYellow", yellowScoreTeamB);
+        outState.putInt("saveTeamBRed", redScoreTeamB);
+    }
+
+    // Restore saved Team A and B score
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        scoreTeamA = savedInstanceState.getInt("saveTeamAScore", scoreTeamA);
+        foulScoreTeamA = savedInstanceState.getInt("saveTeamAFoul", foulScoreTeamA);
+        yellowScoreTeamA = savedInstanceState.getInt("saveTeamAYellow", yellowScoreTeamA);
+        redScoreTeamA = savedInstanceState.getInt("saveTeamARed", redScoreTeamA);
+
+        scoreTeamB = savedInstanceState.getInt("saveTeamBScore", scoreTeamB);
+        foulScoreTeamB = savedInstanceState.getInt("saveTeamBFoul", foulScoreTeamB);
+        yellowScoreTeamB = savedInstanceState.getInt("saveTeamBYellow", yellowScoreTeamB);
+        redScoreTeamB = savedInstanceState.getInt("saveTeamBRed", redScoreTeamB);
+
+        displayForTeamA(scoreTeamA);
+        displayFoulForTeamA(foulScoreTeamA);
+        displayYellowForTeamA(yellowScoreTeamA);
+        displayRedForTeamA(redScoreTeamA);
+
+        displayForTeamB(scoreTeamB);
+        displayFoulForTeamB(foulScoreTeamB);
+        displayYellowForTeamB(yellowScoreTeamB);
+        displayRedForTeamB(redScoreTeamB);
     }
 
     /**
@@ -60,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
         displayRedForTeamA(redScoreTeamA);
     }
 
-
     /**
      * Increase the score for Team B by 1 point.
      */
@@ -93,11 +131,9 @@ public class MainActivity extends AppCompatActivity {
         displayRedForTeamB(redScoreTeamB);
     }
 
-
     /**
      * Reset the Score to 0 when "RESET" button press
      */
-
     public void resetScoreToZero(View v) {
         scoreTeamA = 0;
         displayForTeamA(scoreTeamA);
